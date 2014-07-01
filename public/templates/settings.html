@@ -1,0 +1,44 @@
+<div class='ng-modal'>
+  <div class='ng-modal-overlay'></div>
+  <div class='ng-modal-dialog'>
+    <div class='ng-modal-close' ng-click='close()'>&times;</div>
+    <div class="modal-head"><img class="modal-icon" src="/public/images/iconmonstr-tools-5-icon-22.png"></div>
+    <h2 style="border-bottom:none;padding:0;"></h2>
+    <div class='ng-modal-dialog-content'>
+
+      <!-- content -->
+
+
+      <div class="modal-block insight">
+      <p><span class="insightdata">1</span> novel <span class="insightdata">{{chapterCount}}</span> chapters <span class="insightdata">{{totalWordcount | number}}</span> words</p>
+      <P>
+      </div>
+
+      <div class="modal-block basicsettings">
+        <p><object type="image/svg+xml" data="/public/images/iconmonstr-user-icon.svg"></object><span class="icon-label">{{usermodel.firstname}} {{usermodel.lastname}}</span></p>
+        <p><object type="image/svg+xml" data="/public/images/iconmonstr-time-icon.svg"></object><span class="icon-label">Member since {{usermodel.created | date:'medium'}}</span></p>
+        <p><object type="image/svg+xml" data="/public/images/iconmonstr-email-6-icon.svg"></object><span class="icon-label">{{usermodel.email}}</span></p>
+        <p class="password-section"><object type="image/svg+xml" data="/public/images/iconmonstr-password-9-icon.svg"></object><span class="icon-label">
+        <input ng-model="form.oldpassword" class="password pass-old" type="password" name="oldpassword" placeholder="Old password">
+        <input ng-model="form.password" class="password pass-new" type="password" name="password" placeholder="New password">
+        <input ng-model="form.passwordconfirm" class="password pass-new-again" type="password" name="passwordconfirm" placeholder="New password again">
+        <div class="validation">
+          <span>{{err.oldpassword}}</span>
+          <span>{{err.password}}</span>
+          <span>{{err.passwordconfirm}}</span>
+          <span class="green">{{success}}</span>
+        </div>
+        </span><br>
+        <button class="primary password-save" ng-disabled="saveDisabled()" ng-click="updatePassword()">Change password</button></p>
+        <div class="clear">&nbsp; </div>
+
+      </div>
+      <div class="modal-block">
+      <p>As one of our Beta heroes, you, {{user.firstname}}, are on a free version of Novlr. Woop! We won't take card details for a while yet. Not until you fall in love with it. Don’t worry, even if you never pay you’ll always be able to get your work out. <a target"_blank" href="http://blog.novlr.org/your-work-is-your-work/">Your work is your work</a>.</p>
+      </div>
+<!--       <div class="modal-block">
+        <div class="button feedback red"><a href="https://gitreports.com/issue/Novlr/novlr-beta">Report a bug</a></div>
+      </div> -->
+    </div>
+  </div>
+</div>

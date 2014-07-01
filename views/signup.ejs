@@ -1,0 +1,48 @@
+<% layout('layouts/signedout') -%>
+
+<div class="novlrcontainer signup modal" ng-app="novlr">
+
+    <form name="user" ng-submit="addUser(usermodel, $event)" ng-controller="signupController">
+        <div class="modal-head"><img class="modal-icon" src="/public/images/iconmonstr-pencil-8-icon-22.png"></div>
+        <h2>Create your account<span>It's free!</span></h2>
+
+        <div class="form-body">
+            <div class="form-fields">
+                <span ng-cloak>{{err.email}}</span>
+                <input type="email" name="email" placeholder="Email" ng-model="usermodel.email" required="required">
+
+                <input type="text" name="firstname" placeholder="First name" ng-model="usermodel.firstname"
+                       required="required">
+
+                <input type="text" name="lastname" placeholder="Last name" ng-model="usermodel.lastname"
+                       required="required">
+
+                <input type="password" name="password" id="password" pattern=".{6,}" placeholder="Choose your password"
+                       ng-model="usermodel.password" required="required">
+                <input type="password" name="passwordconfirm" id="passwordconfirm" placeholder="confirm password"
+                       oninput="check(this)" required="required" ng-model="usermodel.passwordconfirm">
+
+                <div class="helpwithicon">
+                    <img class="helpicon" src="/public/images/iconmonstr-info-6-icon-24-22.png">
+
+                    <p class="help">Password must be at least 6 characters</p>
+                </div>
+            </div>
+            <input type="submit" class="button" value="Get writing...">
+
+            <p style="text-align:center;font-size:13px;">Already have an account? <a href="/">Login</a></p>
+
+            <script language='javascript' type='text/javascript'>
+                function check(input) {
+                    if (input.value != document.getElementById('password').value) {
+                        input.setCustomValidity('Oops, did you make a typo? the passwords must match');
+                    } else {
+                        // input is valid -- reset the error message
+                        input.setCustomValidity('');
+                    }
+                }
+            </script>
+        </div>
+    </form>
+
+</div>

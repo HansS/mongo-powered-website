@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html manifest="/public/cache.manifest">
+<head>
+  <title>Novlr</title>
+  <!-- vendor -->
+  <link rel="stylesheet" href="/assets/<%- timestamp %>/styles/all-deps.min.css">
+
+  <!-- own -->
+  <link rel="stylesheet" href="/assets/<%- timestamp %>/styles/style.min.css">
+</head>
+<body>
+
+  <%- body %>
+
+  <!-- vendor -->
+  <script type="text/javascript" src="/assets/<%- timestamp %>/scripts/all-deps.min.js"></script>
+
+  <!-- own -->
+  <script type="text/javascript" src="/assets/<%- timestamp %>/scripts/app.min.js"></script>
+</body>
+</html>

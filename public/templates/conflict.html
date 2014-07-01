@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <div class="modal-head" ></div>
+    <h2 class="modal-title">Wait, get your latest version!</h2>
+</div>
+<div class="modal-body {{modal_status}}">
+    <p>
+        You’ve written some more of your novel on a different device - this isn’t the latest version. You probably want the latest one before you start writing. It’s from {{chapter.updated_time}} on the {{chapter.updated_date}}.
+    </p>
+    <button ng-click="getNewerWords()" class="newer-words">Yes, update to my latest version</button>
+    <p>
+        Alternatively, you can keep this older version but it will override the newer one. Please only do this if you’re sure.
+    </p>
+    <a href="#" ng-click="saveLocalChapters()">Discard my lastest changes and keep this version</a>
+</div>
+<div class="modal-footer">
+</div>

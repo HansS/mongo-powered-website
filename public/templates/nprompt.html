@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <div class="modal-head"><img class="modal-icon" src="/public/images/iconmonstr-pencil-8-icon-22.png"></div>
+    <h2 class="modal-title">{{data.title}}</h2>
+</div>
+<div class="modal-body">
+    <p>{{data.text}}</p>
+    <input type="text" placeholder="{{data.placeholder}}" ng-keypress="inputKeypress($event)" ng-model="$parent.value" autofocus>
+</div>
+<div class="modal-footer">
+    <button class="primary" ng-disabled="!$parent.value" ng-click="ok()">{{data.confirm}}</button>
+    <button class="secondary" ng-click="cancel()">{{data.cancel}}</button>
+</div>

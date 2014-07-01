@@ -1,0 +1,23 @@
+{
+  "development": {
+	  "sessionSecret": "unicorn rainbow",
+	  "cookieName": "novlrsession",
+	  "dbString": "mongodb://localhost/novlr",
+	  "mailchimp_api_key": "c17f23f01524a8f10f45e91c28fc4ca5-us3",
+	  "mailchimp_list_id": "b5d5549fed"
+  },
+  "production_old": {
+	"sessionSecret": "4cJDcBalnV 3dmP3Aecfd",
+	"cookieName": "novlrsession",
+	"dbString": "mongodb://novlr:tU3kGJ5qsSzYmZfpgrGaAdbm@candidate.45.mongolayer.com:10396/novlr_offline_test",
+	"mailchimp_api_key": "c17f23f01524a8f10f45e91c28fc4ca5-us3",
+	"mailchimp_list_id": "b5d5549fed"
+  },
+  "production": {
+	  "sessionSecret": "4cJDcBalnV 3dmP3Aecfd",
+	  "cookieName": "novlrsession",
+	  "dbString": "mongodb://novlr:tU3kGJ5qsSzYmZfpgrGaAdbm@candidate.16.mongolayer.com:10540/novlr_live",
+	  "mailchimp_api_key": "c17f23f01524a8f10f45e91c28fc4ca5-us3",
+	  "mailchimp_list_id": "b5d5549fed"
+  }
+}

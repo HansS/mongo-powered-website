@@ -1,0 +1,152 @@
+
+@mediumblue: #89c7db;
+@lightblueline: 1px solid rgba(137, 199, 299, 0.2);
+
+a, a:hover {
+  color: @mediumblue;
+}
+.ng-modal {
+  font-family: 'Roboto';
+  font-size:16px;
+  
+  .ng-modal-overlay {
+
+    /* A dark translucent div that covers the whole screen */
+    position:absolute;
+    z-index:9999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    opacity: 0.65;
+    }
+
+  .ng-modal-dialog {
+    /* A centered div above the overlay with a box shadow. */
+    z-index:10000;
+    position: fixed;
+    width: 670px; /* Default */
+
+    /* Center the dialog */
+    top: 10%;
+    left: 50%;
+    margin-left: -335px;
+    height:600px;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px #333;
+
+    @media only screen and (max-width : 680px) { width:96%; margin-left:0; left:2%;  }
+  
+    &.welcome {
+    height: 400px;
+      p {
+        text-align: center;
+      }
+      .button {
+        width: 250px;
+        text-align: center;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  h2 {
+        margin: -17px 20px 0;
+        font-weight: 300;
+        padding: 30px 15px;
+        font-size: 40px;
+        color: @mediumblue;  
+        border-top: 1px solid rgba(137, 199, 299, 0.2);
+        border-bottom: 1px solid rgba(137, 199, 299, 0.2);
+        margin-top: -17px;
+        text-align: center;
+    } 
+  .ng-modal-dialog-content {
+    padding: 30px 30px 0;
+
+    h3 {      
+      border-bottom: 2px solid #ccc;
+      margin-top: 20px;
+      padding-bottom: 5px;
+      font-weight: normal;
+      font-size: 1.4em;
+      color: #444;
+    }
+    .modal-block {
+      padding-bottom: 20px;
+      border-bottom: @lightblueline;
+      padding-top: 25px;
+
+      &:last-of-type {
+        border-bottom:none;
+      }
+
+      .icon-label {
+        margin-top: -30px;
+        display: block;
+        margin-left: 40px;
+      }
+    }
+
+  }
+  .ng-modal-close {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 145%;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'arial', 'sans-serif';
+    color:#999;
+  }
+  input {
+
+    &::-webkit-input-placeholder {
+      font-style: italic;
+    }
+    &::-moz-placeholder {
+      font-style: italic;
+    }        
+    &:-moz-placeholder {
+      font-style: italic;
+    }        
+    &:-ms-input-placeholder {
+      font-style: italic;
+    }
+
+    width: 350px;
+    display: block;
+    float: none;
+    margin: 20px auto 10px;
+    padding: 5px 10px;
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Merriweather;
+    font-size: 16px;
+    height: auto;
+
+    &.password {
+      margin: -1px 1% 0 0;
+      float: left;
+      width: 32%;
+      font-size: 14px;
+      padding: 4px 10px;
+    }
+  }
+}
+.validation span {
+  color: rgb(226, 60, 60);
+  display: block;
+  text-align: left;
+  margin: 0;
+  margin-bottom: -22px;
+  padding-left: 40px;
+  padding-top: 24px;
+}
+.validation span.green {
+  color:#6EB857;
+}

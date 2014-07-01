@@ -1,0 +1,1140 @@
+/* Variables */
+
+/* colors */
+
+/* Blues */
+@darkblue: #272933;
+@mediumblue: #89c7db;
+@lightblueline: 1px solid rgba(137, 199, 299, 0.2);
+@eighty_percent_blue: rgba(137, 199, 299, 0.8);
+
+/* greys */
+
+@lightgrey: #F7F7F7;
+@mediumgrey: #E7E7E7;
+@darkgrey: #e4e4e5;
+@darkergrey: #262A33;
+
+/* Fonts */
+
+@mediumfontgrey: #98999c;
+@lightfontgrey:#999999;
+
+
+/* Font sizes */
+
+@fontsizesmall: 13px;
+@fontsizedefault: 16px;
+@fontsizelarge: 20px;
+
+
+/* FONTS for the product */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(/public/fonts/roboto/v10/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(/public/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(/public/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(/public/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+/* FONTS for the editor */
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(/public/fonts/merriweather/v6/ZvcMqxEwPfh2qDWBPxn6nmFp2sMiApZm5Dx7NpSTOZk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url(/public/fonts/merriweather/v6/RFda8w1V0eDZheqfcyQ4EHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(/public/fonts/merriweather/v6/ZvcMqxEwPfh2qDWBPxn6nnl4twXkwp3_u9ZoePkT564.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(/public/fonts/merriweather/v6/EYh7Vl4ywhowqULgRdYwIG0Xvi9kvVpeKmlONF1xhUs.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'), url(/public/fonts/merriweather/v6/So5lHxHT37p2SS4-t60SlHpumDtkw9GHrrDfd7ZnWpU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url(/public/fonts/merriweather/v6/EYh7Vl4ywhowqULgRdYwIL0qgHI2SEqiJszC-CVc3gY.woff) format('woff');
+}
+
+
+/* BASE CSS */
+
+/*fix the height */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto;
+  height: 100%;
+}
+.novlrcontainer {
+  height:100%;
+}
+
+/*.transparent-shade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: transparent;
+}*/
+
+.app {
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  bottom: 45px;
+  background: @lightgrey;
+  overflow: hidden;
+}
+.column {
+  float: left;
+  background: #fff;
+  overflow: hidden;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  /*transition for moving chapter-list off canvas */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+/* USEFUL CLASSES */
+
+.clear {
+  clear:both;
+}
+p.help {
+font-size: @fontsizesmall;
+}
+.alignright{
+  text-align: right;
+  clear: right;
+}
+.floatleft {
+  float: left;
+}
+.rightfloat {
+  float: right;
+}
+
+
+/* Forms */
+
+input {
+  height:  28px;
+}
+
+/* BUTTONS */
+
+input[type="submit"].button, div.button, a.button, button {
+  background: @mediumblue;
+  font-family: Roboto;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 8px;
+  height: auto;
+  display: block;
+  border: none;
+
+  &.password-save {
+    margin:0 0 -35px 40px;
+    padding: 8px 10px;
+  }
+  &:hover {
+    cursor: pointer;
+    background: @eighty_percent_blue;
+  }
+  &.secondary {
+    background:#fff;
+    border: 2px solid @mediumblue;
+    color: @mediumblue;
+
+    &:hover {
+      color:@eighty_percent_blue;
+      border: 2px solid @eighty_percent_blue;
+    }
+  }
+}
+input.ng-invalid:after {
+  content:"\f00c";
+  font-family: FontAwesome;
+}
+
+
+/* FONTS AND TYPOGRAPHY */
+
+h3 {
+-webkit-margin-before: 0;
+}
+a {
+  text-decoration: none;
+}
+
+
+/* HEADER */
+
+.offline {
+  .report-bug,
+  .sign-out,
+  .password-section,
+  .password-save {
+    display: none;
+  }
+}
+
+.novlrnavbar {
+  width: 100%;
+  height: 55px;
+  background-color: @darkblue;
+  background-image: url(/public/images/iconmonstr-cloud-11-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: -50% -50%;
+  &.offline {
+    background-position: 50% 50%;
+  }
+  .message {
+    text-align: center;
+    span {
+      opacity: 0;
+      background-color: rgba(255, 255, 255, 0.17);
+      color: #fff;
+      display: inline-block;
+      border: none;
+      width: auto;
+      padding: 7px 20px;
+      margin: 10px auto;
+      border-radius: 3px;
+      position: absolute;
+      left: 38%;
+      &.offline {
+        left: 30%;
+      }
+    }
+  }
+}
+
+.logo {
+  float: left;
+  width: 180px;
+  padding: 0 35px;
+  height: 55px;
+}
+
+.noveltitle {
+
+  a {
+    text-transform:uppercase;
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    padding: 17px;
+    color: @mediumblue;
+    font-weight: 500;
+
+    div {
+      text-overflow: ellipsis;
+      max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      float: left;
+
+      @media only screen and (max-width : 855px) { display: none;} /* hide title on smaller devices */
+    }
+
+    .chapter-toggle {
+      margin-left: 15px;
+      pointer-events:none;
+      float: left;
+      width: 22px;
+      height: 22px;
+
+      @media only screen and (max-width : 855px) { margin-left: -20px;} /* Adjust padding for hiden title on smaller devices */
+
+    }
+  }
+}
+/* USER MENU (.usermenu) */
+
+.usermenu {
+    /* Size and position */
+    position: relative; /* Enable absolute positioning for children and pseudo elements */
+    width: 200px;
+    margin: 0 auto;
+    padding-right: 20px;
+    float: right;
+    height: 55px;
+    z-index: 100;
+    text-align: right;
+
+    /* Styles */
+    background: @darkblue;
+    cursor: pointer;
+    outline: none;
+    color: @mediumblue;
+
+
+    &.active {
+        &:after {
+          border-color: #A9CFE0 transparent;
+          margin-top: -3px;
+          border-width: 0 6px 6px 6px;
+        }
+        .dropdown {
+        opacity: 1;
+        pointer-events: auto;
+        background: @darkblue;
+        padding-left:0;
+      }
+    }
+    .dropdown {
+      -webkit-padding-start: 0;
+      -webkit-margin-before: 0;
+
+      /* Size & position */
+      position: absolute;
+      top: 100%;
+      left: 0; /* Size */
+      right: 0; /* Size */
+      text-align: left;
+
+      /* Styles */
+      background: #fff;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+
+      /* Hiding */
+      opacity: 0;
+      pointer-events: none;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          background: #272933;
+          &.disabled {
+            &:hover a{
+              background: #272933;
+              cursor:default;
+            }
+            a{
+            color: @mediumfontgrey !important;
+            }
+          }
+          a {
+            display: block;
+            text-decoration: none;
+            padding: 15px 20px;
+            color: #A9CFE0;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition:all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            i {
+              margin-right: 10px;
+            }
+          }
+          &:hover a {
+            background: #5F626A;
+          }
+        }
+    }
+    span {
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 18px 25px 12px 12px;
+      display: block;
+      position: absolute;
+      right: 30px;
+
+      /* Create width to be same as name */
+      width: auto;
+      display: inline-table;
+      white-space: pre;
+      @media only screen and (max-width : 980px) { display: none !important;} /* hide name on smaller devices */
+    }
+
+}
+
+/* CHAPTERS */
+
+.chapter-list {
+  width:360px;
+  height: 100%;
+  background: @darkgrey;
+  position:absolute; /* <-- makes the off canvas "slide" along the top of the editor instead of "push"until 1380px screen width */
+  overflow-y: scroll;
+  z-index: 1;
+  @media only screen and (max-width : 1740px) { position: relative; } /* pushes, adjusting the margins up until 1740px */
+  @media only screen and (max-width : 980px) {  } /* pushes the chapter off canvas up to 1000px */
+
+  .novel-title {
+  padding: 50px 15px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 45px;
+  margin-left: 45px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  line-height: 1.3;
+    input {
+      background: inherit;
+      border: none;
+      border-bottom: 2px dotted #ccc;
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ccc;
+
+    li {
+      padding: 20px 15px 0px 40px;
+      background: @darkgrey;
+      border-left: 5px solid @darkgrey;
+      -webkit-transition: all .2s ease-out;
+      -moz-transition: all .2s ease-out;
+      -o-transition:all .2s ease-out;
+      transition: all .2s ease-out;
+      background-image: none;
+      cursor: pointer;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &.ui-sortable-helper {
+        box-shadow: 0 0 5px #aaa;
+
+        .grippy {
+          display: block;
+        }
+      }
+      .grippy {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 60px;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -o-transition:1s;
+        transition:1s;
+        background: url('/public/images/grippy.png') repeat;
+      }
+
+      .orderid {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        color: #aaa;
+        line-height: 1;
+      }
+
+      .chapter-title {
+          color:#272933;
+          font-size: 15px;
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 25px;
+          line-height: 1.2;
+          margin-right: 45px;
+
+          input {
+            background: inherit;
+            border: none;
+            border-bottom: 2px dotted #ccc;
+            outline: none;
+          }
+          span {
+            cursor: text;
+          }
+      }
+
+      .delete {
+        padding:5px;
+        color:@darkgrey;
+        padding: 5px;
+        float: right;
+        margin: -50px 20px 0 0;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -o-transition:all .2s ease-out;
+        transition: all .2s ease-out;
+
+        i:hover {
+          color: @mediumblue;
+        }
+      }
+
+      &.active {
+        background: url('/public/images/bookmark-left-18px.png') no-repeat 25px 23px @darkgrey;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition:none;
+        background-size: 10px;
+
+        .orderid {
+          color: @mediumblue;
+        }
+
+      }
+      &:hover {
+        .orderid {
+          color: @mediumblue;
+        }
+        .grippy {
+          display: block;
+          cursor: -webkit-grab;
+        }
+
+        .delete {
+          display: block;
+          color: @mediumfontgrey;
+        }
+      }
+    }
+  }
+  &.hidden {
+    margin-left: -360px;
+    visibility: visible !important;
+    display: block !important;
+  }
+  .addchapter {
+    padding-top: 0 !important;
+    margin-bottom: 20px;
+
+    span {
+      cursor: pointer;
+      display: block;
+      padding: 15px 0;
+      margin: 0;
+      margin-right: 45px;
+      margin-left: 45px;
+      color:@mediumblue;
+      font-size:16px;
+      border-bottom: 1px solid @mediumblue;
+      border-top: 1px solid @mediumblue;
+
+      &:hover {
+        background: #e7e7e7;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* PAPER */
+
+.chapter-display {
+  margin: 0 auto;
+  float:none;
+  /*display: inline;*/
+  height: 100%;
+
+  .ng-isolate-scope {
+    height:100%;
+  }
+
+  &.full{
+    /*@media only screen and (max-width : 1000px) { margin-right:-380px; } */
+  }
+  &:hover {
+
+  }
+}
+.noveldata {
+  /*padding: 12px 20px;*/
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: @lightgrey;
+  height: 45px;
+  border-top: 1px solid @darkgrey;
+
+  .chaptermeta {
+    top: 12px;
+    position: absolute;
+    right: 10px;
+
+    span {
+      padding: 0 25px;
+      font-weight: 500;
+      border-right: 1px solid @darkgrey;
+      font-size: 14px;
+      max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow:ellipsis;
+
+      &:last-of-type {
+        border:none;
+      }
+      &:first-of-type {
+        @media only screen and (max-width : 800px) { display:none; }
+      }
+    }
+    .saving{
+      display: inline-block;
+      width: auto;
+      text-align: right;
+      color: @mediumblue;
+    }
+    .wordcount {
+
+    }
+  }
+
+}
+
+#toolbar {
+  color: #777;
+  padding-top: 6px;
+
+  i {
+    cursor:pointer;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+.paper {
+  padding:0;
+  height: 100%;
+  background: @lightgrey;
+
+  /* FONT */
+  p {
+  color: #5e626a;
+  font-size: 1.1em;
+  font-family: roboto;
+  font-weight: 300;
+  line-height: 1.5;
+  }
+
+}
+iframe {
+  height: 100%;
+  bottom: 1px;
+  top: 1px;
+}
+
+.editor-container p {
+  font-size: 1.2em !important;
+}
+
+/* footer */
+
+.novlrfooter {
+position: absolute;
+bottom: 0;
+height: 65px;
+background: #fff;
+width: 100%;
+}
+
+/* Settings modal */
+
+.insight p {
+font-size: 14px;
+color: #333;
+text-align: center;
+text-transform: uppercase;
+}
+.insightdata {
+font-size: 50px;
+color: @mediumblue;
+padding-left: 60px;
+@media only screen and (max-width : 680px) { padding-left:8%; font-size:30px; }
+}
+.insightdata:first-of-type {
+  padding-left:0;
+  margin-left: -20px;
+}
+.button.feedback {
+  float: left;
+  margin-left: 5%;
+  width: 30%;
+  padding: 7px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  box-shadow: 0 6px @darkblue;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    display: block;
+  }
+
+  &:first-of-type {
+  margin-left: 0;
+  }
+  &:hover {
+    box-shadow: 0 4px @darkblue;
+    top: 2px;
+    background: @mediumblue;
+    color: @darkblue;
+  }
+  &:active {
+    box-shadow: 0 0 @darkblue;
+    top: 6px;
+  }
+}
+.userform-options {
+  float: none;
+  position: relative;
+  clear: both;
+  padding-top: 10px;
+}
+.userform {
+  input[type="text"] {
+    border: none;
+    background: #D6D6D6;
+    border: 2px solid #D6D6D6;
+    padding: 0 10px;
+
+  &:hover {
+    outline:2px solid #999;
+    }
+  &:focus{
+    outline:2px solid #999;
+    }
+  }
+}
+.modal-block.basicsettings {
+  padding-right:30px;
+
+  label {
+    font-weight:normal;
+  }
+  p {
+    color: @mediumfontgrey;
+  }
+  .icon-label {
+    margin-top:-27px !important;
+  }
+}
+img.modal-icon {
+  display: block;
+  margin:0 auto;
+  background: #fff;
+  margin-bottom: 0;
+  padding:20px 5px 5px 5px;
+}
+.modal-head {
+  display: block;
+margin: 0 auto;
+background: #fff;
+width: 34px;
+height: 47px;
+}
+.paymentform {
+
+  label {
+    font-weight:normal;
+    color: @lightfontgrey;
+    margin: 5px 0;
+  }
+  input {
+    position: absolute;
+    left: 200px;
+    padding: 10px 10px;
+  }
+}
+
+/* Boostrap modal overides */
+
+
+h2.modal-title {
+  margin: -17px 20px 0;
+  font-weight: 300;
+  padding: 30px 15px;
+  font-size: 40px;
+  color: @mediumblue;
+  border-top: @lightblueline;
+  border-bottom: @lightblueline;
+  margin-top: -17px;
+  text-align: center;
+}
+
+.modal-content {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+
+  .modal-header {
+    padding: 0;
+    border: none;
+  }
+  .modal-body {
+    border: none;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    button.newer-words {
+      width: auto;
+      margin: 20px auto 20px auto;
+    }
+  }
+  .modal-footer {
+    padding: 0 20px 50px;
+    border: none;
+    margin-top: 0;
+    overflow: hidden;
+
+    button {
+      position: relative;
+      left: 50%;
+      margin-left: -90px;
+      width: 180px;
+      margin-top: 10px;
+    }
+  }
+  input {
+
+    &::-webkit-input-placeholder {
+      font-style: italic;
+    }
+    &::-moz-placeholder {
+      font-style: italic;
+    }
+    &:-moz-placeholder {
+      font-style: italic;
+    }
+    &:-ms-input-placeholder {
+      font-style: italic;
+    }
+
+    /* positioning */
+
+    width:350px;
+    height: auto;
+    float: none;
+    position: relative;
+    left: 50%;
+    margin: 10px 0 10px -175px;
+
+    float: left;
+    padding: 4px 10px;
+    background: @lightgrey;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Merriweather;
+    font-size: 16px;
+  }
+}
+/* TEST SITE ONLY - Alpha warning */
+
+.testsitewarning {
+position: absolute;
+padding: 13px;
+overflow: hidden;
+z-index: 1;
+background: red;
+color: #fff;
+width: 100%;
+text-align: center;
+font-size: 15px;
+}
+
+/* MERGE MODALS */
+.modal.merge {
+  .modal-dialog {
+    width: 98%;
+    .modal-header {
+      border-bottom: @lightblueline;
+      padding-bottom: 20px;
+      h2.modal-title {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: none;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-family: Roboto;
+        margin-bottom: 0;
+      }
+    }
+    .modal-body {
+      .detail {
+        font-size: 12px;
+        margin-bottom: 20px;
+        img {
+          width: 31px;
+          position: relative;
+          top: -12px;
+          margin-bottom: -20px;
+          path {
+            fill: red;
+          }
+        }
+      }
+      h3.chapter-title {
+        margin-bottom: 20px;
+      }
+      p {
+        margin: 0;
+      }
+      button {
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+      }
+    }
+    .modal-footer {
+      clear: both;
+    }
+  }
+}
+
+
+
+/* SIGNUP STYLES */
+
+.novlrcontainer.modal {
+  font-family: 'Roboto';
+  background: @darkblue;
+
+
+      form {
+      width: 600px;
+      background: #fff;
+      box-shadow: 0px 5px 15px #333;
+      margin: 0 auto;
+      position: fixed;
+      top: 12%;
+      left: 50%;
+      margin-left: -300px;
+
+      @media only screen and (max-width : 620px) { width:100%; position: relative; top: 0; left: 0; margin: 0; overflow: auto; }
+
+      &.login input[type="submit"] {
+        position: inherit;
+      }
+
+      .form-fields {
+
+        span.ng-binding, p.error {
+            background: rgb(255, 219, 219);
+            padding: 0 8px;
+            border-radius: 7px;
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #444;
+            width:auto;
+        }
+      }
+
+      h2 {
+        margin: -17px 20px 0;
+        font-weight: 300;
+        padding: 30px 15px;
+        font-size: 40px;
+        color: @mediumblue;
+        border-top: @lightblueline;
+        border-bottom: @lightblueline;
+        margin-top: -17px;
+        text-align: center;
+
+        span {
+          display: block;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+
+      .form-body {
+        padding: 30px 30px 30px;
+
+        a {
+          color: @mediumblue;
+        }
+
+        .form-fields {
+          overflow: hidden;
+          padding-bottom: 20px;
+          border-bottom: @lightblueline;
+        }
+      }
+      input {
+
+        &::-webkit-input-placeholder {
+          font-style: italic;
+        }
+        &::-moz-placeholder {
+          font-style: italic;
+        }
+        &:-moz-placeholder {
+          font-style: italic;
+        }
+        &:-ms-input-placeholder {
+          font-style: italic;
+        }
+
+        width: 228px;
+        margin: 0 10px;
+        float: left;
+        margin-bottom: 10px;
+        padding: 4px 10px;
+        background: @lightgrey;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-family: Merriweather;
+        font-size: 16px;
+
+      @media only screen and (max-width : 620px) { width:91%; }
+
+      }
+      input[type="email"] {
+        width: 50%;
+        margin: 10px 25%;
+      }
+      input[type="submit"] {
+        background: @mediumblue;
+        font-family: Roboto;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        height: auto;
+        padding: 8px;
+        margin: 30px 0 10px;
+        border: none;
+        border-radius: 0;
+        position: relative;
+        left: 50%;
+        margin-left: -112px;
+        float: none;
+
+        @media only screen and (max-width : 620px) { width:225px; }
+
+      }
+      .helpwithicon {
+        width:270px;
+        float: left;
+      }
+      p.help {
+        margin: 0;
+      }
+      a.button.secondary {
+        padding: 8px;
+        margin-left: -112px;
+        width: 208px;
+        position: relative;
+        text-align: center;
+        float: none;
+        margin-bottom: 25px;
+        left: 50%;
+      }
+
+      &.login {
+        .form-body {
+          padding: 30px 30px 15px;
+        }
+        input, p {
+          display: block;
+          margin: 10px auto;
+          float: none;
+          width: 275px;
+        }
+        a:visited {
+          color: @mediumblue;
+        }
+        p.help.floatleft {
+          width: 50%;
+          margin-top: 0;
+        }
+      }
+    }
+}
+object.asheading {
+  margin-left: 48%;
+  margin-top: 20px;
+  background: #fff;
+}
+object.helpicon {
+  display: inline-block;
+  float: left;
+  padding:0 4px 0 8px;
+}
+img.helpicon {
+  display: inline-block;
+float: left;
+padding: 0 5px;
+width: 18px;
+margin-left: 5px;
+}
+
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}

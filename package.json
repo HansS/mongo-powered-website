@@ -1,0 +1,70 @@
+{
+  "browser": {
+    "jquery": "./bower_components/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "dependencies": {
+    "bcryptjs": "^0.7.12",
+    "ejs": "~0.8.5",
+    "ejs-locals": "~1.0.2",
+    "express": "~3.5.0",
+    "express-resource": "~1.0.0",
+    "grunt": "~0.4.2",
+    "lingo": "0.0.5",
+    "lodash": "^2.4.1",
+    "mailchimp-api": "2.0.6",
+    "moment": "2.8.3",
+    "mongodb": "~1.3.23",
+    "mongojs": "~0.13.0",
+    "objectid": "1.1.0",
+    "node-random": "~1.0.0",
+    "node-static": "~0.7.3",
+    "passport": "~0.2.0",
+    "passport-local": "~0.1.6",
+    "q": "~1.0.0",
+    "string": "~1.9.1",
+    "tandem-core": "~0.6.1",
+    "xtend": "^3.0.0",
+    "connect-flash": "^0.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.3",
+    "browserify-shim": "~3.6.0",
+    "grunt-browserify": "^2.1.4",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-htmlrefs": "^0.5.0",
+    "grunt-manifest": "0.4.0",
+    "grunt-open": "^0.2.3",
+    "grunt-shell-spawn": "^0.3.0",
+    "karma": "~0.12.17",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-jasmine": "~0.1.5",
+    "matchdep": "~0.3.0",
+    "minimist": "^1.1.0"
+  },
+  "name": "novlr-app",
+  "version": "1.0.7-7",
+  "description": "ERROR: No README data found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "art deineka, kim pryor",
+  "license": "BSD-2-Clause",
+  "subdomain": "novlr-prod",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

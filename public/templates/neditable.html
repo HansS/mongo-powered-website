@@ -1,0 +1,5 @@
+<div>
+  <!-- nEditable -->
+  <span ng-hide="editing" ng-click="edit()">{{value}}</span>
+  <input ng-hide="!editing" ng-model="inputValue" ng-blur="submit(inputValue || value)">
+</div>

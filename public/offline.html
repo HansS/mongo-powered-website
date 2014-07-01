@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html manifest="/public/cache.manifest">
+<head>
+	<title>Novlr</title>
+	<!-- vendor -->
+	<link rel="stylesheet" href="/dist/styles/signedout-deps.min.css">
+
+	<!-- own -->
+	<link rel="stylesheet" href="/dist/styles/style.min.css">
+	<script>
+		if (window.localStorage.getItem('user')) {
+			window.location.pathname = '/mynovel';
+		}
+	</script>
+</head>
+<body>
+<div class="novlrcontainer signup modal">
+	<form class="login">
+		<div class="modal-head"><img class="modal-icon" src="/public/images/iconmonstr-pencil-8-icon-22.png"></div>
+		<h2>You are offline</h2>
+		<div class="form-body">
+			<div class="form-fields">
+				<p style="text-align: center; width: auto;">You can only use Novlr offline if you were signed in before you went offline.</p>
+			</div>
+		</div>
+	</form>
+
+</div>
+</body>
+</html>

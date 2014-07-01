@@ -1,0 +1,60 @@
+<% layout('layouts/signedin') -%>
+
+<div class="novlrcontainer {{app_status}}" ng-app="novlr" ng-controller="mainController">
+  <div class="novlrnavbar {{app_status}}">
+    <object type="image/svg+xml" data="/public/images/Novlr-logo-white.svg" class="logo"></object>
+    <div class="noveltitle" ng-model="$parent.user.novel.title">
+      <a style="cursor: pointer;" accesskey="c">
+        <div ng-cloak>{{$parent.user.novel.title}}</div>
+        <object type="image/svg+xml" data="/public/images/iconmonstr-bookmark-19-icon.svg" class="chapter-toggle"></object>
+      </a>
+    </div>
+    <div id="dd" class="usermenu" tabindex="1">
+      <span ng-cloak>{{user.firstname}} {{user.lastname}}</span><object type="image/svg+xml" data="/public/images/iconmonstr-tools-5-22px-icon.svg" style="margin-top:15px;pointer-events:none;width:22px;height:22px;"></object>
+      <ul class="dropdown">
+        <!-- <li><a href=""><i class="fa fa-book fa-fw"></i>Novels</a></li> -->
+        <li><a href="#/settings"><i class="fa fa-cog fa-fw"></i>Settings</a></li>
+        <li class="report-bug"><a target="_blank" href="https://gitreports.com/issue/Novlr/novlr-beta"><i class="fa fa-comment fa-fw"></i>Report a bug</a></li>
+        <li class="sign-out"><a ng-click="signOut()"><i class="fa fa-sign-out fa-fw"></i>Signout</a></li>
+      </ul>
+    </div>
+    <div class="message">
+      <span class="online" ng-cloak>Novlr is back online, all your changes have been saved</span>
+      <span class="offline" ng-cloak>Novlr is in offline mode. Your changes are saved to your browser but not to the cloud.</span>
+    </div>
+  </div>
+    <div class="app" ng-app="novlr" ng-controller="userController">
+      <div class="column chapter-list hidden" ng-controller="chapterController">
+          <span class="novel-title" ng-cloak n-editable="renameNovel(value, $parent.user)" ng-model="$parent.user.novel.title">{{$parent.user.novel.title}}
+          </span>
+          <ul ui-sortable="orderingOptions" ng-model="chapters">
+            <li ng-click="setPaper(chapter)" ng-repeat="chapter in chapters" ng-if="!chapter.deleted" chapter_id={{chapter._id}} ng-class="{active: currentChapterId == chapter._id}">
+              <!-- <div class="grippy">&nbsp;</div> -->
+              <span class="orderid" ng-cloak>Chapter {{(chapter.order + 1)}}</span>
+              <div n-editable="rename(value, chapter)" ng-model="chapter.title" class="chapter-title" ng-cloak>{{chapter.title}}</div>
+              <span class="delete" n-confirm="deleteChapter(chapter)" n-confirm-data="deleteConfirmData"><i class="fa fa-trash-o fa-fw"></i></span>
+            </li>
+          </ul>
+          <div class="addchapter"><span n-prompt="addChapter(value)" n-prompt-data="addPromptData">Create new chapter &nbsp;&nbsp;<i class="fa fa-file-o fa-fw"></i></span></div>
+      </div>
+      <div class="column chapter-display full" ng-controller="paperController">
+        <div n-paper ng-model="chapter">
+        </div>
+        <div class="noveldata">
+          <div id="toolbar" class="toolbar sc-toolbar-container">
+            <i class="fa ql-bold fa-bold fa-fw"></i>
+            <i class="fa ql-italic fa-italic fa-fw"></i>
+            <i class="fa ql-underline fa-underline fa-fw"></i>
+            <i class="fa ql-strike fa-strikethrough fa-fw"></i>
+          </div>
+          <div class="chaptermeta">
+            <span class="title" ng-cloak>{{chapter.title}}</span>
+            <span class="saving" ng-cloak>{{status}}</span>
+            <span class="wordcount" ng-cloak>{{wordcount | number}} words</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  <div class="popup" ng-view=""></div>
+</div>

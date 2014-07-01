@@ -1,0 +1,19 @@
+<div class='ng-modal'>
+  <div class='ng-modal-overlay'></div>
+  <div class='welcome ng-modal-dialog'>
+    <!-- <div class='ng-modal-close' ng-click='close()'>&times;</div> -->
+    <div class="modal-head" ><img class="modal-icon" src="/public/images/iconmonstr-book-17-icon.png"></div>
+    <h2>Welcome to Novlr!</h2>
+    <div class="ng-modal-dialog-content">
+      <!-- content -->
+  
+      <p>We’re excited because we think writing in Novlr is really really nice, but it’s your opinions we need. Get in there, write a chapter or two and tell us what you think.</p>
+
+      <input type="text" ng-model="title" name="noveltitle" placeholder="Title of your novel" required="required">
+      <button class="button" ng-disabled="!title" ng-click='renameAndClose(title)'>Get writing...</button>
+      <div class="clear"></div>
+
+      <!-- /content -->
+    </div>
+  </div>
+</div>

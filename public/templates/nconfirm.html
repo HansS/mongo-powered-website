@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <div class="modal-head"><img class="modal-icon" src="/public/images/iconmonstr-trash-can-icon-16.png"></div>
+    <h2 class="modal-title">{{data.title}}</h2>
+</div>
+<div class="modal-body">
+    {{data.text}}
+</div>
+<div class="modal-footer">
+    <button class="primary" ng-click="ok()">{{data.confirm}}</button>
+    <button class="secondary" ng-click="cancel()">{{data.cancel}}</button>
+</div>
